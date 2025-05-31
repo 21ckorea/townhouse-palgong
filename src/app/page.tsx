@@ -1,103 +1,178 @@
+'use client';
+
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      {/* Hero Section */}
+      <section className="relative h-screen">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/jagamdo.jpeg"
+            alt="팔공산 전원주택 전경"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            자연과 함께하는 프리미엄 라이프
+          </h1>
+          <p className="text-xl md:text-2xl mb-8">
+            팔공산의 아름다운 전경과 함께하는 특별한 일상
+          </p>
+          <Link
+            href="/contact"
+            className="bg-white text-black px-8 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90 transition"
+          >
+            문의하기
+          </Link>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16">특별한 가치</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="text-center">
+              <div className="bg-gray-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl">🌳</span>
+              </div>
+              <h3 className="text-2xl font-semibold mb-4">자연친화적 환경</h3>
+              <p className="text-gray-600">팔공산의 맑은 공기와 아름다운 경관을 매일 만나보세요</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-gray-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl">🏠</span>
+              </div>
+              <h3 className="text-2xl font-semibold mb-4">프리미엄 설계</h3>
+              <p className="text-gray-600">고급스러운 마감재와 세련된 디자인의 조화</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-gray-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl">🚗</span>
+              </div>
+              <h3 className="text-2xl font-semibold mb-4">편리한 접근성</h3>
+              <p className="text-gray-600">도심과 가까우면서도 프라이빗한 주거환경</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16">갤러리</h2>
+          
+          {/* 1층 내부 */}
+          <div id="1f" className="mb-16 pt-16">
+            <h3 className="text-2xl font-semibold mb-8">1층 내부</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((index) => (
+                <div key={`1f-${index}`} className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                  <Image
+                    src={`/images/1f/1f-${index}.jpeg`}
+                    alt={`1층 내부 이미지 ${index}`}
+                    fill
+                    className="object-cover hover:scale-105 transition duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 2층 내부 */}
+          <div id="2f" className="mb-16 pt-16">
+            <h3 className="text-2xl font-semibold mb-8">2층 내부</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((index) => (
+                <div key={`2f-${index}`} className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                  <Image
+                    src={`/images/2f/2f-${index}.jpeg`}
+                    alt={`2층 내부 이미지 ${index}`}
+                    fill
+                    className="object-cover hover:scale-105 transition duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 외부 전경 */}
+          <div id="exterior" className="mb-16 pt-16">
+            <h3 className="text-2xl font-semibold mb-8">외부 전경</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19].map((index) => (
+                <div key={`exterior-${index}`} className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                  <Image
+                    src={`/images/exterior/exterior-${index}.jpeg`}
+                    alt={`외부 전경 이미지 ${index}`}
+                    fill
+                    className="object-cover hover:scale-105 transition duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 주변 정보 */}
+          <div id="info" className="mb-16 pt-16">
+            <h3 className="text-2xl font-semibold mb-8">주변 정보</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[1, 2, 3].map((index) => (
+                <div key={`info-${index}`} className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                  <Image
+                    src={`/images/info/info-${index}.jpeg`}
+                    alt={`주변 정보 이미지 ${index}`}
+                    fill
+                    className="object-cover hover:scale-105 transition duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 주변 환경 */}
+          <div id="environment" className="mb-16 pt-16">
+            <h3 className="text-2xl font-semibold mb-8">주변 환경</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[1, 2, 3].map((index) => (
+                <div key={`environment-${index}`} className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                  <Image
+                    src={`/images/environment/environment-${index}.jpeg`}
+                    alt={`주변 환경 이미지 ${index}`}
+                    fill
+                    className="object-cover hover:scale-105 transition duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-8">관심이 있으신가요?</h2>
+            <p className="text-xl text-gray-600 mb-12">
+              프리미엄 전원주택의 새로운 라이프스타일을 경험해보세요
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block bg-black text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-800 transition"
+            >
+              상담 예약하기
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

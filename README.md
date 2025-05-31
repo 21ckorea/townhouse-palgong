@@ -1,24 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 팔공산 전원주택 홈페이지
 
-## Getting Started
+팔공산의 아름다운 자연 속에서 품격 있는 삶을 누릴 수 있는 프리미엄 전원주택 홍보 웹사이트입니다.
 
-First, run the development server:
+## 기술 스택
+
+- Next.js 14
+- React
+- TypeScript
+- Tailwind CSS
+
+## 주요 기능
+
+- 반응형 디자인
+- 메인 페이지 (전원주택 소개)
+- 갤러리 섹션
+- 문의하기 페이지
+- 위치 정보
+
+## 시작하기
 
 ```bash
+# 의존성 설치
+npm install
+
+# 개발 서버 실행
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# 프로덕션 빌드
+npm run build
+
+# 프로덕션 서버 실행
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 프로젝트 구조
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+├── src/
+│   ├── app/
+│   │   ├── page.tsx        # 메인 페이지
+│   │   ├── layout.tsx      # 전체 레이아웃
+│   │   └── contact/        # 문의하기 페이지
+│   └── components/         # 재사용 가능한 컴포넌트
+├── public/
+│   └── images/            # 이미지 파일
+└── package.json
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 환경 설정
+
+프로젝트를 실행하기 전에 다음 환경 변수를 설정해야 합니다:
+
+```env
+NEXT_PUBLIC_CONTACT_EMAIL=your-email@example.com
+```
+
+## 라이선스
+
+이 프로젝트는 MIT 라이선스를 따릅니다.
 
 ## Learn More
 
